@@ -1,4 +1,5 @@
 import GamePercent from "./components/game-percent";
+import InterfaceButtonHandler from "./components/interface-button-handler";
 import Media from "./components/media";
 import Player from "./components/music-player";
 import Video from "./components/video";
@@ -50,5 +51,7 @@ export default function Page() {
                 </div>
             </section>
         </div>
+
+        <InterfaceButtonHandler />
     </main>
 }

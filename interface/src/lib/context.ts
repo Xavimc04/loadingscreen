@@ -1,9 +1,11 @@
-import { createContext } from "react";
+import { createContext } from "react"; 
 
-const Context = createContext({
+export const defaultContext = {
     watching: false,
     musicEnabled: false,
     musicVolume: 0.3
-});
+}
+
+const Context = createContext(defaultContext);
 
 export default Context; 
