@@ -1,11 +1,14 @@
 import { createContext } from "react"; 
 
 export const defaultContext = {
-    watching: false,
+    watching: true,
     musicEnabled: false,
     musicVolume: 0.3
 }
 
-const Context = createContext(defaultContext);
+const Context = createContext({
+    state: defaultContext,
+    dispatch: (action: { type: string, payload: any }) => {}
+});
 
 export default Context; 

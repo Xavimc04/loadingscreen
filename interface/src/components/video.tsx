@@ -17,6 +17,7 @@ export default function Video() {
         loop 
         ref={ ref } 
         className="min-w-full min-h-full object-cover z-10"
+        disablePictureInPicture
     >
         <source 
             src={ VIDEO_PATH } 

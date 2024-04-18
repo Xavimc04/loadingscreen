@@ -1,4 +1,26 @@
+import { useContext, useEffect } from "react"
+import Context from "../lib/context";
+
 export default function InterfaceButtonHandler() {
+    const {
+        dispatch
+    } = useContext(Context);
+
+    useEffect(() => {
+        const handleKeyPress = (event: KeyboardEvent) => {
+            if (event.key === 'F1') dispatch({
+                type: 'TOGGLE_WATCHING', 
+                payload: true
+            });
+        };
+      
+        window.addEventListener('keydown', handleKeyPress);
+      
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [])
+
     return <section
         className="fixed top-0 right-0 z-50 mt-5 mr-8 flex items-center gap-4 text-white"
     >
