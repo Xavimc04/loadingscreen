@@ -16,7 +16,7 @@ export default function Video() {
         muted 
         loop 
         ref={ ref } 
-        className="min-w-full min-h-full object-cover"
+        className="min-w-full min-h-full object-cover z-10"
     >
         <source 
             src={ VIDEO_PATH } 
