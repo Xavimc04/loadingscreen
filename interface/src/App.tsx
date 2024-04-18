@@ -1,4 +1,6 @@
 import GamePercent from "./components/game-percent";
+import Media from "./components/media";
+import Player from "./components/music-player";
 import Video from "./components/video";
 import { SERVER_DESCRIPTION, SERVER_NAME } from "./lib/constants";
 
@@ -11,22 +13,22 @@ export default function Page() {
             <img 
                 src="/images/arenawar.png"
                 draggable="false"
-                className="absolute w-full object-cover z-30 -bottom-60 -left-[150px] h-auto hidden lg:block"
+                className="fixed w-full object-cover z-30 -bottom-60 -left-[300px] h-[1100px] hidden lg:block"
             />
 
             <img 
                 src="/images/arenawar.png"
                 draggable="false"
-                className="absolute w-full h-auto object-cover z-20 blur-2xl -bottom-60 -left-[170px] hidden lg:block"
+                className="absolute w-full object-cover z-20 blur-2xl -bottom-60 -left-[290px] h-[1100px] hidden lg:block"
             />
 
             {/* @ Information */}
-            <section className="w-1/3 mr-48 text-white flex flex-col justify-center gap-2 z-40">
+            <section className="w-[80%] lg:w-1/2 xl:w-1/3 mx-48 text-white flex flex-col justify-center gap-2 z-40">
                 <h1 className="text-6xl poppins text-transparent bg-clip-text bg-gradient-to-r to-gray-500 from-white">
                     { SERVER_NAME }
                 </h1>
 
-                <p className="text-lg opacity-30">
+                <p className="text-lg text-red-400">
                     { SERVER_DESCRIPTION }
                 </p>
 
@@ -35,25 +37,16 @@ export default function Page() {
                     <GamePercent />
 
                     {/* @ Music */}
-                    <article 
-                        className="border-4 text-center border-green-500 text-white relative flex flex-col gap-2 justify-center w-1/2 p-10 h-60"
-                        style={{
-                            boxShadow: "inset 0 0 70px rgba(34, 197, 94, 0.5)"
-                        }}
-                    >
-                        <h2
-                            className="poppins text-xl"
-                            style={{
-                                textShadow: "0 0 3px rgba(0, 0, 0, 0.5)"
-                            }}
-                        >
-                            Bandoleros - Don Omar & Tego Calderón
-                        </h2>
+                    <Player />
 
-                        <p className="opacity-40">
-                            Sonando...
-                        </p>
-                    </article>
+                    {/* @ Social media */}
+                    <Media />
+                </div>
+
+                <div className="mt-5">
+                    <p className="text-xs opacity-30">
+                        © { new Date().getFullYear() } { SERVER_NAME }. Todos los derechos reservados.
+                    </p>
                 </div>
             </section>
         </div>
