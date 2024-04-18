@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+  
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+
+.poppins {
+    font-family: poppins;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url('https://bandolerosrp.vercel.app/fonts/poppins.ttf');
+}
