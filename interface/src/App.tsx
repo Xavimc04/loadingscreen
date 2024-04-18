@@ -22,17 +22,38 @@ export default function Page() {
 
             {/* @ Information */}
             <section className="w-1/3 mr-48 text-white flex flex-col justify-center gap-2 z-40">
-                <h1 className="text-6xl poppins">
+                <h1 className="text-6xl poppins text-transparent bg-clip-text bg-gradient-to-r to-gray-500 from-white">
                     { SERVER_NAME }
                 </h1>
 
-                <p className="text-lg">
+                <p className="text-lg opacity-30">
                     { SERVER_DESCRIPTION }
                 </p>
 
-                <div className="mt-5">
+                <div className="mt-5 flex flex-wrap gap-4">
                     {/* @ Game percent */}
                     <GamePercent />
+
+                    {/* @ Music */}
+                    <article 
+                        className="border-4 text-center border-green-500 text-white relative flex flex-col gap-2 justify-center w-1/2 p-10 h-60"
+                        style={{
+                            boxShadow: "inset 0 0 70px rgba(34, 197, 94, 0.5)"
+                        }}
+                    >
+                        <h2
+                            className="poppins text-xl"
+                            style={{
+                                textShadow: "0 0 3px rgba(0, 0, 0, 0.5)"
+                            }}
+                        >
+                            Bandoleros - Don Omar & Tego Calderón
+                        </h2>
+
+                        <p className="opacity-40">
+                            Sonando...
+                        </p>
+                    </article>
                 </div>
             </section>
         </div>
