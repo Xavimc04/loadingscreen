@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
-import { VIDEO_PATH } from "../lib/constants";
+import { VIDEO_PATH, VIDEO_START } from "../lib/constants";
 
 export default function Video() {
     const ref = useRef<HTMLVideoElement>(null);
 
-    // @ Prevent from 20 initial seconds
+    // @ Prevent from intial seconds (credits, etc)
     useEffect(() => {
         if (ref.current) {
-            ref.current.currentTime = 20;
+            ref.current.currentTime = VIDEO_START;
         }
     })
 
