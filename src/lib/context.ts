@@ -8,7 +8,7 @@ export const defaultContext = {
 
 const Context = createContext({
     state: defaultContext,
-    dispatch: (action: { type: string, payload: any }) => {}
+    dispatch: (_action: { type: string, payload: any }) => {}
 });
 
 export default Context; 

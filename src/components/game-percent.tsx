@@ -19,7 +19,7 @@ export default function GamePercent() {
             startDataFileEntries(data: { count: number }) {
                 count = data.count;
             },
-            performMapLoadFunction(data: { name: string }) {
+            performMapLoadFunction(_data: { name: string }) {
                 ++thisCount;
                 handleProgress(((thisCount / count) * 100)); 
             }
